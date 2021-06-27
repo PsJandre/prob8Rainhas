@@ -3,6 +3,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 public class AG {
@@ -14,7 +15,9 @@ public class AG {
       popIni.add(novo);
     }
     int[] inicial = popIni.get(0).getGenes().clone();
+    ImageIcon img = new ImageIcon("rainha4.png");
     JFrame janela = new xadrez(popIni.get(0).getGenes().length, popIni.get(0).getGenes());
+    janela.setIconImage(img.getImage());
     janela.setVisible(true);
     for (int g = 0; g < nGer; g++) {
 
@@ -39,14 +42,14 @@ public class AG {
         janela.setVisible(false);
         inicial = popIni.get(0).getGenes().clone();
         janela = new xadrez(popIni.get(0).getGenes().length, popIni.get(0).getGenes());
+        janela.setIconImage(img.getImage());
         janela.setVisible(true);
-        
-        // imprimirMelhor(g, popIni);
+
       }
       imprimirMelhor(g, popIni);
 
     }
-    
+
     return popIni;
   }
 

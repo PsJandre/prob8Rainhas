@@ -13,9 +13,7 @@ public abstract class Individuo {
     public int[] getGenes(){
       return this.genes;
     }
-    public void setGenes(int[]genes){
-        this.genes = genes;
-      }
+    
 
     public int getAvaliacao() {
         if(!avaliado){
