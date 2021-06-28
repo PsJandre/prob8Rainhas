@@ -29,10 +29,9 @@ public class AG {
       popAux.addAll(filhos);
       popAux.addAll(mutantes);
 
-      Collections.sort(popAux, new Sortbyavaliacao());
       popIni = new ArrayList<Individuo>(nInd);
       popIni = selecao(popAux, nInd, nElite);
-      Collections.sort(popIni, new Sortbyavaliacao());
+      //Collections.sort(popIni, new Sortbyavaliacao());
       if (!vetIgual(popIni.get(0).getGenes(), inicial)) {
         try {
           Thread.sleep(3000);

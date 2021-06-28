@@ -38,5 +38,6 @@ class Sortbyavaliacao implements Comparator<Individuo>
     @Override
     public int compare(Individuo o1, Individuo o2) {
       return o1.getAvaliacao()-o2.getAvaliacao();
+      
     }
 }
